@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hXn-l8-VDJ">
-                                <rect key="frame" x="136.66666666666666" y="79" width="119.99999999999997" height="420"/>
+                                <rect key="frame" x="136.66666666666666" y="89" width="119.99999999999997" height="420"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9U4-c4-1v9">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -52,17 +52,26 @@
                                 <buttonConfiguration key="configuration" style="plain" title="START">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="switchLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gcg-v9-5rV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hXn-l8-VDJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="AcV-hj-eH9"/>
+                            <constraint firstItem="hXn-l8-VDJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="AcV-hj-eH9"/>
                             <constraint firstItem="hXn-l8-VDJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQh-rm-G6x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9cw-gh-jUh" secondAttribute="bottom" constant="55" id="gpj-kK-GWc"/>
                             <constraint firstItem="9cw-gh-jUh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVo-D2-ZWZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="9cw-gh-jUh" id="JNH-wD-cMh"/>
+                        <outlet property="greenLightView" destination="92k-Gg-qIF" id="EcG-nT-Tz3"/>
+                        <outlet property="redLightView" destination="9U4-c4-1v9" id="LGH-xd-QvQ"/>
+                        <outlet property="yellowLightView" destination="W8d-em-FmH" id="jFI-QP-7Yq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
