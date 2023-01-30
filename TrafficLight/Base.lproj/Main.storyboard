@@ -46,8 +46,11 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cw-gh-jUh">
-                                <rect key="frame" x="158.66666666666666" y="728.66666666666663" width="75.666666666666657" height="34.333333333333371"/>
+                                <rect key="frame" x="136.66666666666666" y="728.66666666666663" width="119.99999999999997" height="34.333333333333371"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="eP6-4h-v7G"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -58,7 +61,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hXn-l8-VDJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="AcV-hj-eH9"/>
                             <constraint firstItem="hXn-l8-VDJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQh-rm-G6x"/>
@@ -82,6 +85,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
