@@ -23,10 +23,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9U4-c4-1v9">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="5Ec-o7-lRA"/>
-                                            <constraint firstAttribute="height" constant="120" id="bUh-oP-mhY"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-em-FmH">
                                         <rect key="frame" x="0.0" y="150" width="120" height="120"/>
@@ -45,6 +41,9 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="JMe-wL-HhA"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cw-gh-jUh">
                                 <rect key="frame" x="158.66666666666666" y="728.66666666666663" width="75.666666666666657" height="34.333333333333371"/>
