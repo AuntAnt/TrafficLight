@@ -7,58 +7,65 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     
-    @IBOutlet var actionButton: UIButton!
+    @IBOutlet var switchLightButton: UIButton!
     
-    private var condition: Condition = .stop;
+    private var condition: TrafficLightCondition = .off
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeCircle(views: redLightView, yellowLightView, greenLightView)
-        setAlphaToViews(redAlpha: 0.3, yellowAlpha: 0.3, greenAlpha: 0.3)
-        setSettings(to: actionButton)
+        roundCorners(of: redLightView, yellowLightView, greenLightView)
+        setAlphaToViewsByCondition(condition)
+        configureButton(switchLightButton)
     }
 
     @IBAction func switchLight() {
-        actionButton.configuration?.title = "NEXT"
-        
-        switch condition {
-        case .stop:
-            setAlphaToViews(redAlpha: 1, yellowAlpha: 0.3, greenAlpha: 0.3)
-            condition = .ready
-        case .ready:
-            setAlphaToViews(redAlpha: 0.3, yellowAlpha: 1, greenAlpha: 0.3)
-            condition = .go
-        default:
-            setAlphaToViews(redAlpha: 0.3, yellowAlpha: 0.3, greenAlpha: 1)
+        if (switchLightButton.configuration?.title == "START") {
+            switchLightButton.configuration?.title = "NEXT"
             condition = .stop
+        }
+        
+        setAlphaToViewsByCondition(condition)
+    }
+    
+    private func setAlphaToViewsByCondition(_ currentCondition: TrafficLightCondition) {
+        switch currentCondition {
+        case .stop: redLightView.alpha = 1
+            greenLightView.alpha = 0.3
+            condition = .ready
+        case .ready: redLightView.alpha = 0.3
+            yellowLightView.alpha = 1
+            condition = .go
+        case .go: yellowLightView.alpha = 0.3
+            greenLightView.alpha = 1
+            condition = .stop
+        default: redLightView.alpha = 0.3
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 0.3
         }
     }
 }
 
 extension ViewController {
     
-    enum Condition {
+    private enum TrafficLightCondition {
         
-        case stop, ready, go
+        case off, stop, ready, go
     }
+}
+
+extension ViewController {
     
-    private func makeCircle(views: UIView...) {
+    private func roundCorners(of views: UIView...) {
         views.forEach { $0.layer.cornerRadius = $0.frame.width / 2 }
     }
     
-    private func setSettings(to button: UIButton) {
+    private func configureButton(_ button: UIButton) {
         button.layer.cornerRadius = 12
-    }
-    
-    private func setAlphaToViews(redAlpha: Double, yellowAlpha: Double, greenAlpha: Double) {
-        redLightView.alpha = redAlpha
-        yellowLightView.alpha = yellowAlpha
-        greenLightView.alpha = greenAlpha
     }
 }

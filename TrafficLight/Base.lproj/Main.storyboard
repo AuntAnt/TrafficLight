@@ -70,9 +70,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="9cw-gh-jUh" id="JNH-wD-cMh"/>
                         <outlet property="greenLightView" destination="92k-Gg-qIF" id="EcG-nT-Tz3"/>
                         <outlet property="redLightView" destination="9U4-c4-1v9" id="LGH-xd-QvQ"/>
+                        <outlet property="switchLightButton" destination="9cw-gh-jUh" id="JNH-wD-cMh"/>
                         <outlet property="yellowLightView" destination="W8d-em-FmH" id="jFI-QP-7Yq"/>
                     </connections>
                 </viewController>
