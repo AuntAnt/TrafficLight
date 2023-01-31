@@ -43,6 +43,11 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
+    enum Condition {
+        
+        case stop, ready, go
+    }
+    
     private func makeCircle(views: UIView...) {
         views.forEach { $0.layer.cornerRadius = $0.frame.width / 2 }
     }
@@ -55,10 +60,5 @@ extension ViewController {
         redLightView.alpha = redAlpha
         yellowLightView.alpha = yellowAlpha
         greenLightView.alpha = greenAlpha
-    }
-    
-    enum Condition {
-    
-        case stop, ready, go
     }
 }
