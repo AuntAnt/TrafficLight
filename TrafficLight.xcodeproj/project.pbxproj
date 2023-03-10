@@ -37,6 +37,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B05C85029BB43B2008B1D08 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9B4116B92986F87A009CE0C6 /* AppDelegate.swift */,
+				9B4116BB2986F87B009CE0C6 /* SceneDelegate.swift */,
+				9B4116C72986F87B009CE0C6 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		9B4116AD2986F87A009CE0C6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +66,11 @@
 		9B4116B82986F87A009CE0C6 /* TrafficLight */ = {
 			isa = PBXGroup;
 			children = (
-				9B4116B92986F87A009CE0C6 /* AppDelegate.swift */,
-				9B4116BB2986F87B009CE0C6 /* SceneDelegate.swift */,
+				9B05C85029BB43B2008B1D08 /* App */,
 				9B4116BD2986F87B009CE0C6 /* ViewController.swift */,
 				9B4116BF2986F87B009CE0C6 /* Main.storyboard */,
 				9B4116C22986F87B009CE0C6 /* Assets.xcassets */,
 				9B4116C42986F87B009CE0C6 /* LaunchScreen.storyboard */,
-				9B4116C72986F87B009CE0C6 /* Info.plist */,
 			);
 			path = TrafficLight;
 			sourceTree = "<group>";
@@ -289,7 +297,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 82LJBH6Q35;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrafficLight/Info.plist;
+				INFOPLIST_FILE = TrafficLight/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +328,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 82LJBH6Q35;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TrafficLight/Info.plist;
+				INFOPLIST_FILE = TrafficLight/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
